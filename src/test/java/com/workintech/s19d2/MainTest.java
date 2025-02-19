@@ -8,6 +8,7 @@ import com.workintech.s19d2.entity.Role;
 import com.workintech.s19d2.repository.AccountRepository;
 import com.workintech.s19d2.repository.MemberRepository;
 import com.workintech.s19d2.repository.RoleRepository;
+import com.workintech.s19d2.service.AccountService;
 import com.workintech.s19d2.service.AccountServiceImpl;
 import com.workintech.s19d2.service.AuthenticationService;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,9 +16,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -52,7 +51,7 @@ class MainTest {
 
     @Mock
     private PasswordEncoder passwordEncoder;
-    private AccountServiceImpl accountService;
+    private AccountService accountService;
 
     private Account account;
     private AuthenticationService authenticationService;
